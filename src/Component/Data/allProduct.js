@@ -6,7 +6,8 @@ const fakeData = [{
   "price": 28.1,
   "rating": 4,
   "id":1,
-}, {
+},
+ {
   "name": "Fresh Vegetables",
   "images": "https://www.jiomart.com/images/category/35/thumb/0-35.png",
   "description": "Sweet fresh stawberry on the wooden table",
@@ -15,61 +16,8 @@ const fakeData = [{
   "width": 299,
   "price": 29.45,"id":2,
   "rating": 4,
-}, {
-  "name": "Asparagus",
-  "type": "vegetable",
-  "description": "Asparagus with ham on the wooden table",
-  "filename": "https://www.linkpicture.com/view.php?img=LPic61e25ed04dc8b506514719",
-  "height": 450,
-  "width": 299,
-  "price": 18.95,"id":3,
-  "rating": 3
-}, {
-  "name": "Green smoothie",
-  "type": "dairy",
-  "description": "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
-  "filename": "https://www.linkpicture.com/q/3_944.jpg",
-  "height": 600,
-  "width": 399,
-  "price": 17.68,"id":4,
-  "rating": 4
-}, {
-  "name": "Raw legums",
-  "type": "vegetable",
-  "description": "Raw legums on the wooden table",
-  "filename": "https://www.linkpicture.com/q/4_913.jpg",
-  "height": 450,
-  "width": 299,
-  "price": 17.11,"id":5,
-  "rating": 2
-}, {
-  "name": "Baking cake",
-  "type": "dairy",
-  "description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
-  "filename": "https://www.linkpicture.com/q/5_750.jpg",
-  "height": 450,
-  "width": 675,
-  "price": 11.14,"id":6,
-  "rating": 4
-}, {
-  "name": "Pesto with basil",
-  "type": "vegetable",
-  "description": "Italian traditional pesto with basil, chesse and oil",
-  "filename": "https://www.linkpicture.com/q/6_633.jpg",
-  "height": 450,
-  "width": 299,
-  "price": 18.19,"id":7,
-  "rating": 2
-}, {
-  "name": "Hazelnut in black ceramic bowl",
-  "type": "vegetable",
-  "description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
-  "filename": "https://www.linkpicture.com/q/7_563.jpg",
-  "height": 450,
-  "width": 301,
-  "price": 27.35,"id":8,
-  "rating": 0
-}, {
+},
+ {
   "name": "Herbs & Seasonings",
   "images": "https://www.jiomart.com/images/category/37/thumb/0-37.png",
   "height": 600,
@@ -131,22 +79,24 @@ const fakeData = [{
   "width": 400,
   "price": 20.31,
   "rating": 1
-}, {
-  "name": "Rice & Rice Products",
-  "images": "https://www.jiomart.com/images/category/16/thumb/0-16.png",
-  "filename": "14_16.jpg",
-  "height": 400,
-  "width": 600,"id":18,
-  "price": 14.18,
-  "rating": 1
-}, {
-  "name": "Edible Oils",
-  "images": "https://www.jiomart.com/images/category/18/thumb/0-18.png",
-  "filename": './images/1.jpg',
-  "height": 600,
-  "width": 398,"id":19,
-  "price": 19.49,
-  "rating": 4
+},
+// {
+//   "name": "Rice & Rice Products",
+//   "images": "https://www.jiomart.com/images/category/16/thumb/0-16.png",
+//   "filename": "14_16.jpg",
+//   "height": 400,
+//   "width": 600,"id":18,
+//   "price": 14.18,
+//   "rating": 1
+// }, {
+//   "name": "Edible Oils",
+//   "images": "https://www.jiomart.com/images/category/18/thumb/0-18.png",
+//   "filename": './images/1.jpg',
+//   "height": 600,
+//   "width": 398,"id":19,
+//   "price": 19.49,
+//   "rating": 4
+// }
 // }, {
 //   "name": "Fresh pears",
 //   "type": "fruit",
@@ -435,5 +385,5 @@ const fakeData = [{
 //   "width": 400,
 //   "price": 25.62,
 //   "rating": 3
-}]
+]
 export default fakeData

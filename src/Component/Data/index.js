@@ -1,10 +1,11 @@
-import allProduct from '../Data/allProduct'
+
 import Fruits from '../Data/Fruits'
 import grocery from '../Data/grocery'
 import Vegetable from '../Data/Vegetable'
 import realData from './realData';
+import img from './img';
 
-const FakeData = [...allProduct, ...Fruits,...Vegetable, ...realData ];
+const FakeData = [ ...Fruits,...Vegetable, ...realData, ...img ];
 
 
 const shuffle = a => {

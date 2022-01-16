@@ -3,6 +3,7 @@ import logo from '../../Data//Image/shwapno-logo.jpg'
 import './Navbar.css'
 import { FaLocationArrow, FaShoppingCart, FaUserCircle } from 'react-icons/fa'
 import logos from '../../Data/Image/logo.jpeg'
+import { useNavigate } from 'react-router-dom';
 
 const Nav2 = () => {
     const [value, setValue] = useState(0)
@@ -11,13 +12,14 @@ const Nav2 = () => {
     const handleToggle = () => {
         setNavbarOpen(!navbarOpen)
     }
+    const navig=useNavigate()
     return (
         <div className="">
             <ul class="flex bg-danger">
                 <li class="d-flex flex-1 mr-2">
                     {/* /////////////////// */}
                     {/* <img className="img-fluid w-10 bg-danger" src={logo} alt="" class="img-fluid ml-4" /> */}
-                     <a class="navbar-brand ml-2" href="#"> <span class="fw-bold fs-2 text-yellow-300">S</span><span class=" fw-bold text-green-400 ">unrise mart</span></a>
+                     <a onClick={()=> navig('/')} class="navbar-brand ml-2" href="#"> <span class="fw-bold fs-2 text-yellow-300">S</span><span class=" fw-bold text-green-400 ">unrise mart</span></a>
                     {/* <FaLocationArrow className="font-bold mt-4 ml-4" />
                     <p className="h3 mt-3 ml-4">  Dhaka</p> */}
 

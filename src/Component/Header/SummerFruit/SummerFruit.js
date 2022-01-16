@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Carousel from 'react-grid-carousel';
+import { useNavigate } from 'react-router-dom';
 import fakedata from '../../Data/Fruits2'
 const SummerFruit = () => {
     const [data,setData]= useState(fakedata)
+    const navigate = useNavigate()
     return (
         <div className=" m-5">
             <p className="h4 textcolor  font-bold mx-5 text-start  mb-4">Summer Fruit<i></i></p>
@@ -20,7 +22,7 @@ const SummerFruit = () => {
                                 className="border rounded"
                             >
                                 <div class="row p-4 text-center">
-                                    <img src={each.images} alt="" className="img-fluid w-30" />
+                                    <img  onClick={() => navigate('/allProduct')} src={each.images} alt="" className="img-fluid w-30" />
                                     <p className="h6 mt-1 font-bold text-center text-emerald-800 ">{each.name}</p>
 
                                 </div>

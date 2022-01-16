@@ -11,10 +11,10 @@ const OfferLogo = () => {
             <div className="row">
                <div  style={{ margin: '0px 5px' , textAlign: 'center', }}>
                     <div className="flex p-5 justify-content-center ">
-                    <img src={logo1} alt="" class="img-fluid logo  mx-3" />
-                    <img src={logo2} alt="" class="img-fluid logo mx-3" />
-                    <img src={logo3} alt="" class="img-fluid logo mx-3" />
-                    <img src={logo4} alt="" class="img-fluid logo mx-3" />
+                    <img src={logo1} alt="" class="img-fluid logo  mx-3 box2 rounded border" />
+                    <img src={logo2} alt="" class="img-fluid logo mx-3 box2 rounded border" />
+                    <img src={logo3} alt="" class="img-fluid logo mx-3 box2 rounded border" />
+                    <img src={logo4} alt="" class="img-fluid logo mx-3 box2 rounded border" />
                 </div>
                </div>
             </div>
