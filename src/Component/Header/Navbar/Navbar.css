@@ -2,8 +2,17 @@
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
 }
-
-
+.menudiv {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+.menu-img {
+  background: black;
+  margin-right: 20px;
+  cursor: pointer;
+}
 
 .ml-auto, .mx-auto {
   margin-left: auto !important;

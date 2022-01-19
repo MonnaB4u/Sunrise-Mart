@@ -5,7 +5,6 @@ import './Top.css'
 const Topsave = () => {
     const [datas] = useState(data)
     const filter = datas.slice(0, 5)
-    console.log(filter)
     const navigate = useNavigate()
     return (
         <div className="">

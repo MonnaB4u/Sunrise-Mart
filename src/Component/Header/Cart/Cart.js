@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const Cart = (props) => {
     const cart = props.cart
@@ -20,7 +20,6 @@ const Cart = (props) => {
 
     const { ID } = useParams();
     const findId = cart.find(product => product.id.toString() === ID)
-    const findname = cart.map(product => product.name)
     const navigation = useNavigate()
 
     const handlePd = () => {
@@ -28,6 +27,7 @@ const Cart = (props) => {
             alert("Please Add to Cart First Before Confirm You Order ")
         } else {
             navigation(`/orderConfirm/${findId.id}`)
+
         }
     }
 
@@ -69,6 +69,7 @@ const Cart = (props) => {
             </div>
             <div className="text-center my-3">
                 <button onClick={() => handlePd()} className="btn border text-white bg-sky-700 rounded-full">Order Procedure</button>
+
             </div>
             <div className="mt-5 border-top"></div>
         </div>

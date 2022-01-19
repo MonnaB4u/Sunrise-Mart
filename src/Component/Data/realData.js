@@ -3,7 +3,7 @@ const realData = [
         "name": "Fresh Fruits",
         "images": "https://www.jiomart.com/images/category/36/thumb/0-36.png",
         "quantity": "One Unit",
-        "id": 1,
+        "id": 71,
         "price": 10,
         "type": "fruits"
     },
@@ -11,7 +11,7 @@ const realData = [
         "name": "Fresh Vegetables",
         "images": "https://www.jiomart.com/images/category/35/thumb/0-35.png",
         "quantity": "One Unit",
-        "id": 3,
+        "id": 73,
         "price": 10,
         "type": "fruits"
     },
@@ -19,7 +19,7 @@ const realData = [
         "name": "Herbs & Seasonings",
         "images": "https://www.jiomart.com/images/category/37/thumb/0-37.png",
         "quantity": "One Unit",
-        "id": 4,
+        "id": 74,
         "price": 150,
         "type": "fruits"
     },
@@ -27,7 +27,7 @@ const realData = [
         "name": "Dairy",
         "images": "https://www.jiomart.com/images/category/117/thumb/dairy-20200522.png",
         "quantity": "One Bunch",
-        "id": 5,
+        "id": 75,
         "price": 150,
         "type": "fruits"
     },
@@ -35,7 +35,7 @@ const realData = [
         "name": "Toast & Khari",
         "images": "https://www.jiomart.com/images/category/46/thumb/0-46.png",
         "quantity": "One Unit",
-        "id": 6,
+        "id": 76,
         "price": 80,
         "type": "fruits"
     },
@@ -43,7 +43,7 @@ const realData = [
         "name": "Breads and Buns",
         "images": "https://www.jiomart.com/images/category/240/thumb/breads-and-buns-20200522.png",
         "quantity": "One Unit",
-        "id": 8,
+        "id": 78,
         "price": 30,
         "type": "fruits"
     },
@@ -51,7 +51,7 @@ const realData = [
         "name": "Bakery Snacks",
         "images": "https://www.jiomart.com/images/category/281/thumb/bakery-snacks-20200712.png",
         "quantity": "One Container",
-        "id": 9,
+        "id": 79,
         "price": 200,
         "type": "fruits"
     },
@@ -59,7 +59,7 @@ const realData = [
         "name": "Atta, Flours & Sooji",
         "images": "https://www.jiomart.com/images/category/14/thumb/0-14.png",
         "quantity": "One Unit",
-        "id": 12,
+        "id": 212,
         "price": 10,
         "type": "fruits"
     },
@@ -67,7 +67,7 @@ const realData = [
         "name": "Dals & Pulses",
         "images": "https://www.jiomart.com/images/category/19/thumb/0-19.png",
         "quantity": "One Unit",
-        "id": 14,
+        "id": 214,
         "price": 10,
         "type": "fruits"
     },
@@ -75,7 +75,7 @@ const realData = [
         "name": "Rice & Rice Products",
         "images": "https://www.jiomart.com/images/category/16/thumb/0-16.png",
         "quantity": "One Unit",
-        "id": 15,
+        "id": 215,
         "price": 20,
         "type": "fruits"
     },
@@ -83,7 +83,7 @@ const realData = [
         "name": "Edible Oils",
         "images": "https://www.jiomart.com/images/category/18/thumb/0-18.png",
         "quantity": "One Unit",
-        "id": 17,
+        "id": 217,
         "price": 50,
         "type": "fruits"
     },
@@ -91,7 +91,7 @@ const realData = [
         "name": "Dry Fruits",
         "images": "https://www.jiomart.com/images/category/17/thumb/0-17.png",
         "quantity": "One Unit",
-        "id": 1,
+        "id": 201,
         "price": 10,
         "type": "fruits"
     },
@@ -99,7 +99,7 @@ const realData = [
         "name": "turmeric",
         "images": "https://www.jiomart.com/images/category/15/thumb/0-15.png",
         "quantity": "One Unit",
-        "id": 3,
+        "id": 203,
         "price": 10,
         "type": "fruits"
     },
@@ -107,7 +107,7 @@ const realData = [
         "name": "Madhur Tea Salt",
         "images": "https://www.jiomart.com/images/category/20/thumb/0-20.png",
         "quantity": "One Unit",
-        "id": 4,
+        "id": 204,
         "price": 150,
         "type": "fruits"
     },
@@ -115,7 +115,7 @@ const realData = [
         "name": "fortune",
         "images": "https://www.jiomart.com/images/category/72/thumb/soya-products-wheat-other-grains-20200522.png",
         "quantity": "One Bunch",
-        "id": 5,
+        "id": 205,
         "price": 150,
         "type": "fruits"
     },
@@ -123,7 +123,7 @@ const realData = [
         "name": "Biscuits & Cookies",
         "images": "https://www.jiomart.com/images/category/44/thumb/0-44.png",
         "quantity": "One Unit",
-        "id": 6,
+        "id": 206,
         "price": 80,
         "type": "fruits"
     },
@@ -131,7 +131,7 @@ const realData = [
         "name": "Breakfast Cereals",
         "images": "https://www.jiomart.com/images/category/188/thumb/breakfast-cereals-20200603.png",
         "quantity": "One Unit",
-        "id": 8,
+        "id": 208,
         "price": 30,
         "type": "fruits"
     },
@@ -139,7 +139,7 @@ const realData = [
         "name": "Snacks & Namkeen",
         "images": "https://www.jiomart.com/images/category/135/thumb/0-135.png",
         "quantity": "One Container",
-        "id": 9,
+        "id": 209,
         "price": 200,
         "type": "fruits"
     },
@@ -147,7 +147,7 @@ const realData = [
         "name": "Chocolates & Candies",
         "images": "https://www.jiomart.com/images/category/43/thumb/0-43.png",
         "quantity": "One Unit",
-        "id": 12,
+        "id": 312,
         "price": 10,
         "type": "fruits"
     },
@@ -155,7 +155,7 @@ const realData = [
         "name": "Tea",
         "images": "https://www.jiomart.com/images/category/21/thumb/0-21.png",
         "quantity": "One Unit",
-        "id": 14,
+        "id": 314,
         "price": 10,
         "type": "fruits"
     },
@@ -163,7 +163,7 @@ const realData = [
         "name": "Fruit juices",
         "images": "https://www.jiomart.com/images/category/25/thumb/0-25.png",
         "quantity": "One Unit",
-        "id": 15,
+        "id": 315,
         "price": 20,
         "type": "fruits"
     },
@@ -171,7 +171,7 @@ const realData = [
         "name": "Energy & Soft Drinks",
         "images": "https://www.jiomart.com/images/category/26/thumb/0-26.png",
         "quantity": "One Unit",
-        "id": 17,
+        "id": 317,
         "price": 50,
         "type": "fruits"
     }

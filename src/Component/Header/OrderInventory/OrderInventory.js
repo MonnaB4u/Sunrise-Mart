@@ -13,7 +13,7 @@ const OrderInventory = () => {
     const [cart, setCart] = useState([])
     const handlecart = ((product) => {
         // setData(cart + 1)
-        console.log(product)
+        // console.log(product)
         const pd = [...cart, product]
         setCart(pd)
     })
@@ -22,7 +22,7 @@ const OrderInventory = () => {
     return (
         <div className="">
             <div className="row">
-                <Nav1></Nav1>
+                <Nav1 cart={cart}></Nav1>
                 <div className="col-sm-2">
                     <Sidebar2></Sidebar2>
                 </div>

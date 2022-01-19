@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import data from '../../Data/realData'
 const Trending = () => {
+
     const [datas] = useState(data)
     const slice = datas.slice(5, 10)
     const navigate = useNavigate()
+
     return (
         <div>
             <div className="container my-4">

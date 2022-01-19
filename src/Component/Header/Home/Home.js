@@ -9,6 +9,7 @@ import './Home.css'
 import Topsave from '../Topsave/Topsave';
 import Trending from '../Trending/Trending';
 import Footer from '../Footer/Footer';
+import Payment from '../Payment/Payment';
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
             <Topsave></Topsave>
             <Trending></Trending>
             <Footer></Footer>
+
         </div>
     );
 };

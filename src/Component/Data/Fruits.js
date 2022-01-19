@@ -3,7 +3,7 @@ const Fruits=[
 		"name":"Bananas",
 		"images":"https://banner2.cleanpng.com/20171127/dc6/large-bananas-png-clipart-5a1c0c194f3566.1087336815117875453244.jpg",
 		"quantity":"One Unit",
-		"id":1,
+		"id":21,
 		"price": 10,
         "type":"fruits"
 	},
@@ -11,7 +11,7 @@ const Fruits=[
 		"name":"Oranges",
 		"images":"https://banner2.cleanpng.com/20171127/cf0/orange-clipart-picture-5a1c5d6ce9fab1.6471796215118083649584.jpg",
 		"quantity":"One Unit",
-		"id":3,
+		"id":93,
 		"price": 10,
         "type":"fruits"
 		},
@@ -19,7 +19,7 @@ const Fruits=[
 		"name":"Watermelon",
 		"images":"https://banner2.cleanpng.com/20171127/5eb/large-painted-watermelon-png-clipart-5a1c7f2d316e43.2563705015118170052025.jpg",
 		"quantity":"One Unit",
-		"id":4,
+		"id":94,
 		"price": 150,
         "type":"fruits"
 	},
@@ -27,7 +27,7 @@ const Fruits=[
 		"name":"Grapes",
 		"images":"https://banner2.cleanpng.com/20171127/55b/large-grapes-png-clipart-5a1ce8ed75d626.6366021615118440774827.jpg",
 		"quantity":"One Bunch",
-		"id":5,
+		"id":95,
 		"price": 150,
         "type":"fruits"
 	},
@@ -35,7 +35,7 @@ const Fruits=[
 		"name":"Pineapple",
 		"images":"https://banner2.cleanpng.com/20171127/382/pineapple-png-vector-clipart-image-5a1c46718ae5b2.5079999715118024815689.jpg",
 		"quantity":"One Unit",
-		"id":6,
+		"id":96,
 		"price": 80,
         "type":"fruits"
 	},
@@ -43,7 +43,7 @@ const Fruits=[
 		"name":"Apples",
 		"images":"https://banner2.cleanpng.com/20171128/e41/large-red-apples-png-clipart-5a1d39e6d320c3.2044834015118648068648.jpg",
 		"quantity":"One Unit",
-		"id":8,
+		"id":98,
 		"price": 30,
         "type":"fruits"
 	},
@@ -51,7 +51,7 @@ const Fruits=[
 		"name":"StrawBerries",
 		"images":"https://banner2.cleanpng.com/20171202/eae/strawberry-png-images-5a22f496ce4515.9389434015122402788449.jpg",
 		"quantity":"One Container",
-		"id":9,
+		"id":99,
 		"price": 200,
         "type":"fruits"
 	},
@@ -59,7 +59,7 @@ const Fruits=[
 		"name":"Mangoes",
 		"images":"https://banner2.cleanpng.com/20171127/220/mango-png-clip-art-image-5a1c0cf1624626.7089879915117877614025.jpg",
 		"quantity":"One Unit",
-		"id":12,
+		"id":112,
 		"price": 10,
         "type":"fruits"
 	},
@@ -67,7 +67,7 @@ const Fruits=[
 		"name":"Lemons",
 		"images":"https://banner2.cleanpng.com/20171202/828/lemon-transparent-5a23035f80f7f7.4640506915122440635283.jpg",
 		"quantity":"One Unit",
-		"id":14,
+		"id":114,
 		"price": 10,
         "type":"fruits"
 	},
@@ -75,7 +75,7 @@ const Fruits=[
 		"name":"Avocado",
 		"images":"https://banner2.cleanpng.com/20180606/sre/kisspng-avocado-clip-art-avocato-5b180f80cfe028.4936203615283034888515.jpg",
 		"quantity":"One Unit",
-		"id":15,
+		"id":115,
 		"price": 20,
         "type":"fruits"
 	},
@@ -83,7 +83,7 @@ const Fruits=[
 		"name":"Pawpaw",
 		"images":"https://banner2.cleanpng.com/20180227/kle/kisspng-juice-milk-bubble-tea-fruit-food-papaya-fruit-5a95f8fcaf0979.837006321519778044717.jpg",
 		"quantity":"One Unit",
-		"id":17,
+		"id":117,
 		"price": 50,
         "type":"fruits"
 	}

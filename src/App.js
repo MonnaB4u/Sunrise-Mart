@@ -9,7 +9,7 @@ import {
 import Home from './Component/Header/Home/Home';
 import OrderInventory from './Component/Header/OrderInventory/OrderInventory';
 import AllProduct2 from './Component/Header/AllProduct/AllProduct2';
-import Payment from './Component/Header/ConfirmOrder/Payment';
+import Payment from './Component/Header/Payment/Payment';
 
 
 
