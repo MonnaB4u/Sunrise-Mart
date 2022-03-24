@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const Cart = (props) => {
-    const cart = props.cart
+
+   const cart = props.cart
     const total = cart.reduce((total, prd) => total + prd.price, 0)
 
     let shipping = 0;
@@ -19,18 +20,17 @@ const Cart = (props) => {
     const grandTotal = grandTotals.toFixed(2)
 
     const { ID } = useParams();
-    const findId = cart.find(product => product.id.toString() === ID)
+    const findId = cart.find(product => product._id.toString() === ID)
     const navigation = useNavigate()
 
     const handlePd = () => {
         if (cart.length === 0) {
             alert("Please Add to Cart First Before Confirm You Order ")
         } else {
-            navigation(`/orderConfirm/${findId.id}`)
+            navigation(`/orderConfirm/${findId._id}`)
 
         }
     }
-
 
     return (
         <div className="mr-4 mt-5">

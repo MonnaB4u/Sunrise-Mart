@@ -1,28 +1,55 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
-import index2 from '../../Data/index2'
 import Cart from '../Cart/Cart';
-import Nav1 from '../Navbar/Nav1';
 import Sidebar2 from '../Sidebar/Sidebar2';
 import './orderInventory.css'
-const OrderInventory = () => {
-    const { ID } = useParams()
-    const finddata = index2.find(data => data.id.toString() === ID)
+import Nav2 from '../Navbar/Nav2';
 
-    const [cart, setCart] = useState([])
+const OrderInventory = (props) => {
+
+    const [pd, setData] = useState([])
+    const { ID } = useParams()
+    const [urls, setUrl] = useState()
+
+console.log(ID)
+    useEffect(() => {
+        const url = `http://localhost:5000/dataCollection/${ID}`
+        const url2 = `http://localhost:5000/topSave/${ID}`
+        const url3 = `http://localhost:5000/trending/${ID}`
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setData(data))
+
+        fetch(url2)
+            .then(res => res.json())
+            .then(data => setData(data))
+
+        fetch(url3)
+            .then(res => res.json())
+            .then(data => setData(data))
+    }, [])
+
+    const { cart, setCart } = props
     const handlecart = ((product) => {
-        // setData(cart + 1)
-        // console.log(product)
         const pd = [...cart, product]
         setCart(pd)
     })
 
-    const navigate = useNavigate()
+    const handleDcart = e => {
+        const newPost = [...cart];
+        newPost.splice(0, 1);
+        setCart(newPost);
+    }
+
+    const [buttonText, setButtonText] = useState("+Add");
+    const [buttonText2, setButtonText2] = useState("-Delete");
+
     return (
         <div className="">
             <div className="row">
-                <Nav1 cart={cart}></Nav1>
+                <Nav2></Nav2>
                 <div className="col-sm-2">
                     <Sidebar2></Sidebar2>
                 </div>
@@ -39,34 +66,51 @@ const OrderInventory = () => {
                             </tr>
                         </thead>
                         <tbody>
+
                             <tr>
-                                <td className="" >{Cart.length}</td>
+                                <td className="" ></td>
                                 <td className="row">
-                                        <div className="col-sm border">
-                                            <img src={finddata.images} className="img-fluid w-20 " alt="" />
-                                        </div>
-                                        <div className="col-sm">
-                                            <p className=" font-bold justify-text text-start ">{(finddata.name).toUpperCase()}</p>
-                                        </div>
+                                    <div className="col-sm border">
+                                        <img src={pd.images} className="img-fluid w-20 " alt="" />
+                                    </div>
+                                    <div className="col-sm">
+                                        <p className=" font-bold justify-text text-start ">{(pd.name)}</p>
+                                    </div>
                                 </td>
                                 <td>
                                     <span id="spnUnitPrice">
                                         <span class="sp_currencysyb mx-1">৳</span>
-                                        <span class="sp_amt">{finddata.price}</span>
+                                        <span class="sp_amt">{pd.price}</span>
                                     </span>
                                 </td>
-                                <td>{finddata.quantity}</td>
-                                <td> <span id="spnUnitPrice"><span class="sp_currencysyb">৳</span> <span class="sp_amt">{finddata.price}</span></span></td>
-                                <td>
-                                    <button onClick={() => handlecart(finddata)} className="btn bg-green-600 rounded-full text-white">Add to Cart</button>
-                                    <button onClick={() => navigate('/')} className="btn bg-red-600 rounded-full text-white mx-1">Delete</button>
+                                <td>{pd.quantity}</td>
+                                <td> <span id="spnUnitPrice"><span class="sp_currencysyb">৳</span> <span class="sp_amt">{pd.price}</span></span></td>
+                                <td className="text-center ">
+                                    <button onClick={() => {
+                                        handlecart(pd)
+                                        setButtonText("Added");
+                                        setTimeout(() => {
+                                            setButtonText("+Add");
+                                        }, 1000);
+                                    }} className="btn bg-green-600 rounded-full text-white mx-2">{buttonText}</button>
+
+                                    <button
+                                        onClick={() => {
+                                            handleDcart(pd)
+                                            setButtonText2("Deleted");
+                                            setTimeout(() => {
+                                                setButtonText2("-Delete");
+                                            }, 1000);
+                                        }}
+                                        className="btn bg-green-600 rounded-full text-white ">{buttonText2}</button>
                                 </td>
                             </tr>
+
                         </tbody>
                     </Table>
                 </div>
                 <div className="col-sm-2 border-l">
-                    <Cart cart={cart}></Cart>
+                    <Cart cart={cart} setCart={setCart}></Cart>
                 </div>
             </div>
 

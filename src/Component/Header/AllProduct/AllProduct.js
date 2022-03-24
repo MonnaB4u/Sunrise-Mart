@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import allData from '../../Data/index2'
 import './AllProduct2.css'
 const AllProduct = () => {
-    const [data] = useState(allData)
-    console.log(data)
-const navigate = useNavigate()
+    const [pd, setData] = useState([])
+    const navigate = useNavigate()
+    useEffect  (() => {
+        const url =`http://localhost:5000/dataCollection`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setData(data))
+    }, [])
     return (
         <div className="container">
             <div className="row ">
                 {
-                    data.map((each, index) =>
+                    pd.map((each, index) =>
                         <>
                             <div className="col-sm-3 flex justify-center ">
                                 <div className="box   text-center m-3 px-1">
@@ -22,7 +27,7 @@ const navigate = useNavigate()
                                         <small>Tk: ${each.price}</small>
                                         <small>Quantity {each.quantity}</small>
                                     </div>
-                                    <button onClick={() => navigate(`/orderinventory/${each.id}`)} className="btn my-3 bg-sky-600 text-white">Add to Cart</button>
+                                    <button onClick={() => navigate(`/orderinventory/${each._id}`)} className="btn my-3 bg-sky-600 text-white">Add to Cart</button>
                                 </div>
                             </div>
                         </>

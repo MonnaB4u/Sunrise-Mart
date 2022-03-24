@@ -5,16 +5,16 @@ const Sidebar2 = () => {
         <div>
                 <div className="col-sm-2">
                     <div className="col-sm-2 border sideHead" style={{ minWidth: '250px' }}>
-                        <div className="mt-2">
-                            <ul className="m-4">
-                                <li className="my-2 ">Meat&Fish</li>
-                                <li className="my-2 ">Cooking Essentials</li>
-                                <li className="my-2 ">Sauces & Pickels</li>
-                                <li className="my-2 ">Snakes & Instant Food</li>
-                                <li className="mt-2 ">Dry Food</li>
-                            </ul>
+                     <div className="mt-2 ">
+                    <ul className="m-4">
+                        <li className="my-2 my-3 border-bottom border-top p-2 box2">Meat&Fish</li>
+                        <li className="my-2 my-3 border-bottom border-top  p-2 box2">Cooking Essentials</li>
+                        <li className="my-2 my-3 border-bottom border-top  p-2 box2">Sauces & Pickels</li>
+                        <li className="my-2 my-3 border-bottom border-top  p-2 box2">Snakes & Instant Food</li>
+                        <li className="mt-2 my-3 border-bottom border-top  p-2 box2">Dry Food</li>
+                    </ul>
 
-                        </div>
+                </div>
                     </div>
 
                 </div>

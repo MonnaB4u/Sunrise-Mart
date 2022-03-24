@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import data from '../../Data/realData'
 import './Top.css'
-const Topsave = () => {
-    const [datas] = useState(data)
+const Topsave = (props) => {
+    const { cart, setCart } = props
+    const [datas, setData] = useState([])
+
+    useEffect(() => {
+        const url = 'http://localhost:5000/topSave'
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setData(data))
+    }, [])
+
     const filter = datas.slice(0, 5)
     const navigate = useNavigate()
+
     return (
         <div className="">
             <p className="h3 textcolor text-center font-bold border-bottom">Top Savers Today!</p>
@@ -29,7 +39,7 @@ const Topsave = () => {
                                     <small>Quantity: {each.quantity}</small>
                                 </div>
                                 <div className="text-center my-3">
-                                    <button onClick={() => navigate(`/orderinventory/${each.id}`)} className="btn border rounded-full text-white bg-sky-700 ">Add to Cart</button>
+                                    <button onClick={() =>  navigate(`/orderinventory/${each._id}`) && setCart([...cart])}  className="btn border rounded-full text-white bg-sky-700 ">Add to Cart</button>
                                 </div>
                             </div>
                         </div>

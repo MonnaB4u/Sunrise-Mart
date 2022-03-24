@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Payment.css'
 import data from '../../Data/index2'
 import { useNavigate, useParams } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
-const PaymentMain = () => {
+const PaymentMain = (props) => {
+    const cart = props
+    const bigata = cart.cart.cart
+    console.log(bigata)
     const { conID } = useParams()
-    const finddata = data.find(pd => pd.id.toString() === conID)
-    // console.log(finddata)
-
-    const total = finddata.price
+    const finddata = bigata.find(pd => pd._id.toString() === conID)
+    var total = bigata.map(bill => bill.price).reduce((total, product) => product + total);
 
     let shipping = 0;
     if (total >= 200) {
@@ -32,9 +34,6 @@ const PaymentMain = () => {
     const [location, setlocation] = useState([])
     const [cardName, setCardname] = useState([])
     const [ownerName, setownerName] = useState([])
-
-
-
 
     const hCnumner = (e) => {
         setCnumner(e.target.value)
@@ -61,10 +60,42 @@ const PaymentMain = () => {
     const hsetOrder = (e) => {
         e.preventDefault();
         setOrder([...order, { date: date, owner: ownerName, price: grandTotal, pname: finddata.name, cardNum: cNumber, cvCode: cvCode, location: location, cardName: cardName }])
+        &&
+        fetch('http://localhost:5000/ordersInsert', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify([...order, { date: date, owner: ownerName, price: grandTotal, pname: finddata.name, cardNum: cNumber, cvCode: cvCode, location: location, cardName: cardName }])
+        }).then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Items Inserted Successfully')
+                }
+            })
+    }
+    // navigate(`orderSucess/${finddata.id}`)
+    console.log(order)
+    const navigate = useNavigate()
+    const [loggedInuser, setLoggedInUser] = useContext(UserContext);
+
+    const [od, setOd] = useState([])
+
+
+    const clicks = () => {
+
+        fetch('http://localhost:5000/ordersInsert', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify([order])
+        }).then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Items Inserted Successfully')
+                }
+            })
     }
 
-    console.log(order)
-    // const navigate = useNavigate()
+
+
 
     return (
         <div>
@@ -109,8 +140,9 @@ const PaymentMain = () => {
 
                                             <div class="col-lg-5 mb-lg-0 mb-3">
                                                 <p class="h4 mb-0">Summary</p>
-                                                <p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green" > {(finddata.name).toUpperCase()} </span> </p>
+                                                <p class="mb-0"><span class="fw-bold">Product Name:</span><span class="c-green" > {(finddata.name)} </span> </p>
                                                 <p class="mb-0"> <span class="fw-bold">Main Price:</span> <span class="c-green" >: ${finddata.price} </span> </p>
+                                                <p class="mb-0"> <span class="fw-bold">You have ordered: {bigata.length} </span> <span class="c-green" >: ${total} </span> </p>
                                                 <p class="mb-0"> <span class="fw-bold">Shipping Price:</span> <span class="c-green" >: ${shipping}</span> </p>
                                                 <p class="mb-0 border-bottom"> <span class="fw-bold">Tax Price:</span> <span class="c-green">: ${tax}</span> </p>
                                                 <p class="mb-0"> <span class="fw-bold">Toal Price:</span> <span class="c-green">: ${grandTotal}</span> </p>
@@ -139,7 +171,7 @@ const PaymentMain = () => {
                                                     </div>
 
                                                     <div class="col-12">
-                                                        <div class="form__div"> <input type="text" class="form-control" placeholder=" " value={ownerName} onChange={hsetownerName} /> <label for="" class="form__label">Full Name Recipent</label> </div>
+                                                        <div class="form__div"> <input type="text" class="form-control" placeholder={loggedInuser.name} value={ownerName} onChange={hsetownerName} /> <label for="" class="form__label">Full Name Recipent</label> </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form__div"> <input type="text" class="form-control" placeholder=" " value={location} onChange={hsetlocation} /> <label for="" class="form__label">Set Your Location</label> </div>
@@ -182,13 +214,13 @@ const PaymentMain = () => {
                                                         <div className="p-3">
                                                             <p class="h4 mb-0">{each.date} </p>
                                                             <p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green" > {each.pname} </span> </p>
-                                                            <p class="mb-0"> <span class="fw-bold">Shipping Price:</span> <span class="c-green" >: ${each.price}</span> </p>
+                                                            <p class="mb-0"> <span class="fw-bold">Total Price:</span> <span class="c-green" >: ${each.price}</span> </p>
                                                             <p class="mb-0 "> <span class="fw-bold">Card: number</span> <span class="c-green">: ${each.cardNum}</span> </p>
                                                             <p class="mb-0"> <span class="fw-bold">Cvv Code:</span> <span class="c-green">: ${each.cvCode}</span> </p>
                                                             <p class="mb-0"> <span class="fw-bold">Bank Card Name:</span> <span class="c-green">: ${each.cardName}</span> </p>
                                                             <p class="mb-0"> <span class="fw-bold">Recipent Name:</span> <span class="c-green">: ${each.owner}</span> </p>
                                                             <p class="mb-0"> <span class="fw-bold">Location :</span> <span class="c-green">: ${each.location}</span> </p>
-                                                            <button class="btn sbtn border rounded-full text-white bg-sky-700" type="submit">Confirm Order </button>
+                                                            <button onClick={clicks} class="btn sbtn border rounded-full text-white bg-sky-700" type="submit">Confirm Order </button>
 
                                                         </div>
                                                     </div>

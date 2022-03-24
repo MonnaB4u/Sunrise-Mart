@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import fakedata2 from '../../Data/index2'
 import './PopularItems.css'
 const Items = () => {
 
-    const popularData = fakedata2.slice(0, 4)
-    // console.log(popularData)
+    const [data, setData] = useState([])
     const navigate = useNavigate()
+
+    useEffect(() => {
+        const url = `http://localhost:5000/dataCollection`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setData(data))
+    }, [])
+
+    const popularData = data.slice(0, 4)
+    const [text, setText] = useState(false)
+    const clicks=() => {
+      setText(!text)
+    }
     return (
         <div>
+            {/* <button onClick={clicks} className="btn btn-primary">{text? 'close' : 'open'}</button> */}
             <div className="row mx-5">
                 {
                     popularData.map((each, index) =>
@@ -24,7 +37,7 @@ const Items = () => {
                                     <small>Quantity: {each.quantity}</small>
                                 </div>
                                 <div className="text-center my-3">
-                                    <button onClick={()=> navigate(`/orderinventory/${each.id}`)} className="btn border rounded-full text-white bg-sky-700 ">Add to Cart</button>
+                                    <button onClick={() => navigate(`/orderinventory/${each._id}`)} className="btn border rounded-full text-white bg-sky-700 ">Add to Cart</button>
                                 </div>
 
                             </div>

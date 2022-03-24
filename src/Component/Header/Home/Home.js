@@ -11,15 +11,15 @@ import Trending from '../Trending/Trending';
 import Footer from '../Footer/Footer';
 import Payment from '../Payment/Payment';
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div>
-            <Nav1></Nav1>
+            <Nav1 cart={props.cart}></Nav1>
             <Sidebar></Sidebar>
             <Carusels2></Carusels2>
             <OfferLogo></OfferLogo>
             <SummerFruit></SummerFruit>
-            <Topsave></Topsave>
+            <Topsave cart={props.cart} setCart={props.setCart}></Topsave>
             <Trending></Trending>
             <Footer></Footer>
 

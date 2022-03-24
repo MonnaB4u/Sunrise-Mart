@@ -5,6 +5,10 @@ import fakedata from '../../Data/Fruits2'
 const SummerFruit = () => {
     const [data,setData]= useState(fakedata)
     const navigate = useNavigate()
+
+
+
+
     return (
         <div className=" m-5">
             <p className="h4 textcolor  font-bold mx-5 text-start  mb-4">Summer Fruit<i></i></p>

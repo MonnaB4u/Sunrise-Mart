@@ -15,7 +15,7 @@ import img10 from '../../Data/Image/SHWAPNO-1025x340.jpg'
 const Carusels = () => {
   const navigate = useNavigate()
   return (
-    <div className="my-4">
+    <div className="my-4 container">
       <Carousel>
         <Carousel.Item interval={1000}>
           <img
