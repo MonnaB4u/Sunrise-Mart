@@ -135,8 +135,8 @@ const EmailPassLogin = () => {
 
 
     return (
-        <div className="d-flex justify-content-center mt-3">
-            <div className=" login-form text-white p-5">
+        <div className="d-flex justify-content-center  mt-3 mb-4">
+            <div className=" login-form text-white p-5 col-md-5 col-sm-5 col-lg-5 col-10">
                 <form onSubmit={handleRegistrations}>
                     <p className="h3 text-center">Please {isLogin ? "Login" : "Register"}</p>
                     {

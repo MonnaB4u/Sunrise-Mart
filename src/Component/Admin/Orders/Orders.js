@@ -9,7 +9,7 @@ const Orders = () => {
     // const [urls, setUrl] = useState()
 console.log(pd)
     useEffect(() => {
-        const url = `http://localhost:5000/order`
+        const url = `https://nameless-shelf-98595.herokuapp.com/order`
         fetch(url)
             .then(res => res.json())
             .then(data => setData(data))

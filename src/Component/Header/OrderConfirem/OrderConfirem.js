@@ -9,9 +9,9 @@ const OrderConfirem = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/dataCollection/${id}`
-        const url2 = `http://localhost:5000/topSave/${id}`
-        const url3 = `http://localhost:5000/trending/${id}`
+        const url = `https://nameless-shelf-98595.herokuapp.com/dataCollection/${id}`
+        const url2 = `https://nameless-shelf-98595.herokuapp.com/topSave/${id}`
+        const url3 = `https://nameless-shelf-98595.herokuapp.com/trending/${id}`
 
         fetch(url)
             .then(res => res.json())

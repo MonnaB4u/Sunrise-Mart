@@ -6,7 +6,7 @@ const Trending = () => {
 
     const [datas, setData] = useState([])
     useEffect(() => {
-        const url = 'http://localhost:5000/trending'
+        const url = 'https://nameless-shelf-98595.herokuapp.com/trending'
         fetch(url)
             .then(res => res.json())
             .then(data => setData(data))

@@ -67,9 +67,9 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="">
             <div>
-                <div className=" m-5 col-sm">
+                <div className="">
                     <EmailPassLogin></EmailPassLogin>
                 </div>
                 <div className="col-sm text-center">

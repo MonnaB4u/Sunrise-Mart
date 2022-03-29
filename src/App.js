@@ -39,16 +39,14 @@ function App() {
           <Route path='/login' element={<Login />} />
 
           <Route element={<PrivateRoute />}>
-
+            <Route path='/orderConfirm/:conID' element={<Payment cart={cart} />} />
+            <Route path='/orderConfirm/:conID/orderSucess/:id' element={<OrderConfirem></OrderConfirem>} />
+            <Route path='/admin' element={<AdminHome />} />
+            <Route path='/addAllPD' element={<AddAllpd />} />
+            <Route path='/topSave' element={<TopSave />} />
+            <Route path='/trending' element={<AddTrending />} />
+            <Route path='/orders' element={<Orders></Orders>} />
           </Route>
-          <Route path='/orderConfirm/:conID' element={<Payment cart={cart} />} />
-          <Route path='/orderConfirm/:conID/orderSucess/:id' element={<OrderConfirem></OrderConfirem>} />
-          <Route path='/admin' element={<AdminHome />} />
-          <Route path='/addAllPD' element={<AddAllpd />} />
-          <Route path='/topSave' element={<TopSave />} />
-          <Route path='/trending' element={<AddTrending />} />
-          <Route path='/orders' element={<Orders></Orders>} />
-
         </Routes>
       </BrowserRouter>
 

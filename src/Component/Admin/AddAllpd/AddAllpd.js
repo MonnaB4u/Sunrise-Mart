@@ -21,7 +21,7 @@ const AddAllpd = () => {
         const newProject = { name, price, images, type, quantity }
         console.log(newProject);
 
-        fetch('http://localhost:5000/allProduct', {
+        fetch('https://nameless-shelf-98595.herokuapp.com/allProduct', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newProject)

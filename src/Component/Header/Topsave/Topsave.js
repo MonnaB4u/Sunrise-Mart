@@ -7,7 +7,7 @@ const Topsave = (props) => {
     const [datas, setData] = useState([])
 
     useEffect(() => {
-        const url = 'http://localhost:5000/topSave'
+        const url = 'https://nameless-shelf-98595.herokuapp.com/topSave'
         fetch(url)
             .then(res => res.json())
             .then(data => setData(data))

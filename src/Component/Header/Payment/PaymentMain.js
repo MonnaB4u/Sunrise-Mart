@@ -61,7 +61,7 @@ const PaymentMain = (props) => {
         e.preventDefault();
         setOrder([...order, { date: date, owner: ownerName, price: grandTotal, pname: finddata.name, cardNum: cNumber, cvCode: cvCode, location: location, cardName: cardName }])
         &&
-        fetch('http://localhost:5000/ordersInsert', {
+        fetch('https://nameless-shelf-98595.herokuapp.com/ordersInsert', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify([...order, { date: date, owner: ownerName, price: grandTotal, pname: finddata.name, cardNum: cNumber, cvCode: cvCode, location: location, cardName: cardName }])
@@ -82,7 +82,7 @@ const PaymentMain = (props) => {
 
     const clicks = () => {
 
-        fetch('http://localhost:5000/ordersInsert', {
+        fetch('https://nameless-shelf-98595.herokuapp.com/ordersInsert', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify([order])

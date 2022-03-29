@@ -5,7 +5,7 @@ const AlltopPD = () => {
       const [pd, setData] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
-        const url = `http://localhost:5000/topSave`
+        const url = `https://nameless-shelf-98595.herokuapp.com/topSave`
         fetch(url)
             .then(res => res.json())
             .then(data => setData(data))
@@ -15,7 +15,7 @@ const AlltopPD = () => {
 
         const proceed = window.confirm('Are you sure you want to delete')
         if (proceed) {
-            const url = `http://localhost:5000/topSave/${id}`
+            const url = `https://nameless-shelf-98595.herokuapp.com/topSave/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

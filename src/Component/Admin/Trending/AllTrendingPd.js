@@ -5,7 +5,7 @@ const AllTrendingPd = () => {
      const [pd, setData] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
-        const url = `http://localhost:5000/trending`
+        const url = `https://nameless-shelf-98595.herokuapp.com/trending`
         fetch(url)
             .then(res => res.json())
             .then(data => setData(data))
@@ -15,7 +15,7 @@ const AllTrendingPd = () => {
 
         const proceed = window.confirm('Are you sure you want to delete')
         if (proceed) {
-            const url = `http://localhost:5000/trending/${id}`
+            const url = `https://nameless-shelf-98595.herokuapp.com/trending/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

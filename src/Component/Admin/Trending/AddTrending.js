@@ -19,7 +19,7 @@ const AddTrending = () => {
         const newProject = { name, price, images, type, quantity }
         console.log(newProject);
 
-        fetch('http://localhost:5000/trendingInsert', {
+        fetch('https://nameless-shelf-98595.herokuapp.com/trendingInsert', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newProject)

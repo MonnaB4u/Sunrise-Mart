@@ -8,7 +8,7 @@ const Items = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        const url = `http://localhost:5000/dataCollection`
+        const url = `https://nameless-shelf-98595.herokuapp.com/dataCollection`
         fetch(url)
             .then(res => res.json())
             .then(data => setData(data))

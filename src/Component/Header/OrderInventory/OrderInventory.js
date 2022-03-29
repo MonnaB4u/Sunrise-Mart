@@ -14,9 +14,9 @@ const OrderInventory = (props) => {
 
 console.log(ID)
     useEffect(() => {
-        const url = `http://localhost:5000/dataCollection/${ID}`
-        const url2 = `http://localhost:5000/topSave/${ID}`
-        const url3 = `http://localhost:5000/trending/${ID}`
+        const url = `https://nameless-shelf-98595.herokuapp.com/dataCollection/${ID}`
+        const url2 = `https://nameless-shelf-98595.herokuapp.com/topSave/${ID}`
+        const url3 = `https://nameless-shelf-98595.herokuapp.com/trending/${ID}`
 
         fetch(url)
             .then(res => res.json())
